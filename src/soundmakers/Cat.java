@@ -1,2 +1,10 @@
-package soundmakers;public class Cat {
+package soundmakers;
+
+
+public class Cat extends Animal
+{
+    public void makeSound()
+    {
+        System.out.println("Meow");
+    }
 }

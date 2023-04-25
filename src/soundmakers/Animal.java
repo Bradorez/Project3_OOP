@@ -1,2 +1,6 @@
-package soundmakers;public class Animal {
+package soundmakers;
+
+
+public abstract class Animal implements SoundMaker
+{
 }

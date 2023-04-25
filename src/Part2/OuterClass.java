@@ -1,54 +1,49 @@
 package Part2;
 
-public class Main
-{
+
     public class OuterClass
     {
 
-        // Inner class (non-static nested class)
         class InnerClass
         {
-            void innerClassMethod()
+            void innerMethod()
             {
-                System.out.println("This is an inner class method.");
+                System.out.println("inner method");
             }
         }
 
-        void outerClassMethod()
+        void outerMethod()
         {
-            System.out.println("This is an outer class method.");
+            System.out.println("outer method");
 
-            // Local class (class defined inside a method)
             class LocalClass
             {
-                void localClassMethod()
+                void localMethod()
                 {
-                    System.out.println("This is a local class method.");
+                    System.out.println("local method");
                 }
             }
 
-            LocalClass localClassInstance = new LocalClass();
-            localClassInstance.localClassMethod();
+            LocalClass localInstance = new LocalClass();
+            localInstance.localMethod();
 
-            // Anonymous class (subclass without a name)
-            Runnable anonymousClassInstance = new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("This is an anonymous class method.");
+            Runnable anonymousInstance = new Runnable()
+            {
+                public void run()
+                {
+                    System.out.println("anonymous method");
                 }
             };
 
-            anonymousClassInstance.run();
+            anonymousInstance.run();
         }
 
-        public static void main(String[] args) {
-            OuterClass outerClassInstance = new OuterClass();
-            outerClassInstance.outerClassMethod();
-
-            // Using inner class
-            InnerClass innerClassInstance = outerClassInstance.new InnerClass();
-            innerClassInstance.innerClassMethod();
+        public static void main(String[] args)
+        {
+            OuterClass outerInstance = new OuterClass();
+            outerInstance.outerMethod();
+            InnerClass innerInstance = outerInstance.new InnerClass();
+            innerInstance.innerMethod();
         }
     }
 
-}

@@ -1,2 +1,6 @@
-package Part1;public class Animal {
+package Part1;
+
+abstract class Animal
+{
+    public abstract void makeSound();
 }

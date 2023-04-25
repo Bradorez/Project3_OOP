@@ -1,2 +1,6 @@
-package soundmakers;public class SoundMaker {
+package soundmakers;
+
+public interface SoundMaker
+{
+    void makeSound();
 }

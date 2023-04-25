@@ -1,2 +1,5 @@
-package soundmakers;public class Amphibian {
+package soundmakers;
+
+public abstract class Amphibian implements SoundMaker
+{
 }

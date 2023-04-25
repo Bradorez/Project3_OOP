@@ -1,2 +1,5 @@
-package soundmakers;public class Insect {
+package soundmakers;
+
+public abstract class Insect implements SoundMaker
+{
 }
